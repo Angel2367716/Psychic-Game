@@ -13,22 +13,23 @@ document.onkeyup = function (event) {
     if ((userGuess === computerGuess)) {
         winsScore++;
         guessesLeft = 9;
-    }else {
+    } else {
         guessesLeft--;
     } if (guessesLeft === 0) {
         lossesScore++;
         guessesLeft = 10;
     }
-    let html =
+    const html =
         "<p>Guess what letter I'm thinking of:</p> " +
         "<p>Wins: " + winsScore + "</p>" +
         "<p>Losses: " + lossesScore + "</p>" +
-        "<p>Guesses Left: " + guessesLeft + "</p>"
-        "<p>Your Guesses So Far: " + guessedLetters.join(', ') + "</p>";
+        "<p>Guesses Left: " + guessesLeft + "</p>" +
+        "<p>Your Guesses So Far: " + guessedLetters.join(", ") + "</p>";
     document.getElementById("game").innerHTML = html;
 
+
     console.log(guessedLetters)
-    }
+}
 
 
 
